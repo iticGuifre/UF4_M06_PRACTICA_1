@@ -16,6 +16,15 @@ class ProductCreate(BaseModel):
 class ProductCreateResponse(BaseModel):
     msg: str
 
+
+class ProductUpdate(BaseModel):
+    name: Union[str, None] = None
+    description: Union[str, None] = None
+    company: Union[str, None] = None
+    price: Union[float, None] = None
+    units: Union[int, None] = None
+    subcategory_id: Union[int, None] = None
+
 # Endpoint que mostra tots els productes
 @app.get("/product")
 def read():
@@ -45,4 +54,33 @@ def create_product(product_data: ProductCreate):
         
     else:
         return {"msg": "Producte no ha sigut creat"}
+    
+# Endpoint que modifica un producte
+@app.put("/product/{product_id}", response_model=ProductCreateResponse)
+def update_product(product_id: int, product_data: ProductUpdate):
+    product_dict = product_data.dict(exclude_unset=True)
+    updated_product = botiga_db.update_product(product_id, product_dict)
+    if updated_product:
+        return {"msg": "S’ha modificat correctament"}
+    else:
+        return {"msg": "Producte no trobat"}
+
+# Endpoint que esborra un producte
+@app.delete("/product/{product_id}", response_model=ProductCreateResponse)
+def delete_product(product_id: int):
+    deleted = botiga_db.delete_product(product_id)
+    if deleted:
+        return {"msg": "S’ha borrat correctament"}
+    else:
+        return {"msg": "Producte no trobat"}
+    
+# Endpoint que mostra tots els productes amb la següent informació:
+# nom de la categoria, nom de la subcategoria, nom del producte, marca del producte i el preu.
+@app.get("/productAll")
+def read_all_products():
+    products = botiga_db.read_all_products()
+    if products:
+        return products
+    else:
+        return {"msg": "No s'han trobat productes"}
         

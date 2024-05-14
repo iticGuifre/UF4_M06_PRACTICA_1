@@ -70,3 +70,56 @@ def create_product(product_data: dict):
         return {"status": -1, "message": f"Error de connexió:{e}"}
     finally:
         conn.close()
+
+
+def update_product(product_id: int, product_data: dict):
+    try:
+        conn = db_client()
+        cur = conn.cursor()
+        set_clause = ", ".join(f"{key} = %({key})s" for key in product_data.keys())
+        product_data["product_id"] = product_id
+        cur.execute(f"""
+            UPDATE product
+            SET {set_clause}, updated_at = CURRENT_TIMESTAMP
+            WHERE product_id = %(product_id)s
+            """, product_data)
+        conn.commit()
+        
+        cur.execute("SELECT * FROM product WHERE product_id = %s", (product_id,))
+        result = cur.fetchone()
+        if result:
+            return producte_schema(result)
+    except Exception as e:
+        return {"status": -1, "message": f"Error de connexió:{e}"}
+    finally:
+        conn.close()
+
+def delete_product(product_id: int):
+    try:
+        conn = db_client()
+        cur = conn.cursor()
+        cur.execute("DELETE FROM product WHERE product_id = %s", (product_id,))
+        conn.commit()
+        return cur.rowcount > 0
+    except Exception as e:
+        return {"status": -1, "message": f"Error de connexió:{e}"}
+    finally:
+        conn.close()
+
+def read_all_products():
+    try:
+        conn = db_client()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT category.name as category_name, subcategory.name as subcategory_name,
+                   product.name as product_name, product.company, product.price
+            FROM product
+            JOIN subcategory ON product.subcategory_id = subcategory.subcategory_id
+            JOIN category ON subcategory.category_id = category.category_id
+            """)
+        result = cur.fetchall()
+    except Exception as e:
+        return {"status": -1, "message": f"Error de connexió:{e}"}
+    finally:
+        conn.close()
+    return [{"category_name": row[0], "subcategory_name": row[1], "product_name": row[2], "company": row[3], "price": row[4]} for row in result]
