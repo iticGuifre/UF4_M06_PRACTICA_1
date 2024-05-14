@@ -1,5 +1,6 @@
 import mysql.connector
 
+#Connexió a la base de dades botiga.
 def db_client():
     try:
         dbname = "botiga"

@@ -1,8 +1,9 @@
 from client import db_client
 
-# Llegeix tots els productes
+# Llegeix tots els productes de la taula (product)
 def read():
     try:
+        #Proba la conexió a la BD.
         conn = db_client()
         cur = conn.cursor()
         cur.execute("select * from product")
@@ -34,7 +35,7 @@ def producte_schema(producte) -> dict:
 def productes_schema(productes) -> dict:
     return [producte_schema(producte) for producte in productes]
 
-# Llgeix productes per id
+# Llegeix un producte per id
 def read_product_by_id(product_id: int):
     try:
         conn = db_client()
@@ -49,7 +50,7 @@ def read_product_by_id(product_id: int):
     finally:
         conn.close()
 
-# Crea un producte
+# Crea un nou producte amb les dades proporcionades
 def create_product(product_data: dict):
     try:
         conn = db_client()
@@ -71,7 +72,7 @@ def create_product(product_data: dict):
     finally:
         conn.close()
 
-
+# Modifica un producte existen amb les noves dades proporcionades
 def update_product(product_id: int, product_data: dict):
     try:
         conn = db_client()
@@ -94,6 +95,7 @@ def update_product(product_id: int, product_data: dict):
     finally:
         conn.close()
 
+# Elimina un producte per id
 def delete_product(product_id: int):
     try:
         conn = db_client()
@@ -106,6 +108,7 @@ def delete_product(product_id: int):
     finally:
         conn.close()
 
+# Mostra tots els productes de forma específica. 
 def read_all_products():
     try:
         conn = db_client()
