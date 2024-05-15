@@ -45,4 +45,9 @@ def create_product(product_data: ProductCreate):
         
     else:
         return {"msg": "Producte no ha sigut creat"}
+    
+@app.post("/loadProducts")
+def load_products():
+    product_json = botiga_db.load_products()
+    return product_json
         
