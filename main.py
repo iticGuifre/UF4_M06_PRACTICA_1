@@ -5,6 +5,8 @@ import botiga_db
 
 app = FastAPI()
 
+# PRIMERA PART --------------------------------------------------------------------------------
+
 #Model per crear un nou producte
 class ProductCreate(BaseModel):
     name: str
@@ -63,8 +65,8 @@ def create_product(product_data: ProductCreate):
         return {"msg": "S’ha afegit correctement"}
         
     else:
-        return {"msg": "Producte no ha sigut creat"}
-    
+        return {"msg": "Producte no ha sigut creat"}  
+      
 # Endpoint que modifica un producte
 @app.put("/product/{product_id}", response_model=ProductCreateResponse)
 def update_product(product_id: int, product_data: ProductUpdate):
@@ -99,4 +101,12 @@ def read_all_products():
         return products
     else:
         return {"msg": "No s'han trobat productes"}
+    
+
+# SEGONA PART --------------------------------------------------------------------------------
+# Endpoint que carrega tots els productes de un document csv
+@app.post("/loadProducts")
+def load_products():
+    product_json = botiga_db.load_products()
+    return product_json
         

@@ -1,0 +1,38 @@
+id_categoria,nom_categoria,id_subcategoria,nom_subcategoria,id_producto,nom_producto,descripcion_producto,companyia,precio,unidades
+1,Informatica,1,Laptops,1001,ThinkPad X1 Carbon,The ThinkPad X1 Carbon is an excellent business laptop with a slim and durable design.,Lenovo,1500,100
+1,Informatica,1,Laptops,1002,MacBook Pro 13,The MacBook Pro 13 is a powerful laptop for creative professionals with an impressive Retina display.,Apple,1800,120
+1,Informatica,1,Laptops,1003,ROG Zephyrus G14,The ROG Zephyrus G14 is a powerful gaming laptop with a high-refresh-rate screen and a sleek design.,ASUS,2000,90
+1,Informatica,2,Desktops,1004,Inspiron 27 7000,The Inspiron 27 7000 is a powerful all-in-one desktop computer with a large touchscreen display.,Dell,1200,50
+1,Informatica,2,Desktops,1005,Mac Mini,The Mac Mini is a compact desktop computer that delivers powerful performance in a small package.,Apple,800,70
+1,Informatica,2,Desktops,1006,ThinkCentre M90n,The ThinkCentre M90n is a compact desktop computer designed for business use with flexible mounting options.,Lenovo,1000,80
+1,Informatica,3,Tablets,1007,iPad Air,The iPad Air is a versatile tablet with a stunning Retina display and support for the Apple Pencil.,Apple,600,100
+1,Informatica,3,Tablets,1008,Surface Pro 7,The Surface Pro 7 is a powerful 2-in-1 laptop with a detachable keyboard and touch screen.,Microsoft,900,80
+1,Informatica,3,Tablets,1009,Tab S7,The Tab S7 is a premium Android tablet with a gorgeous AMOLED display and S Pen support.,Samsung,700,90
+1,Informatica,1,Laptops,1010,ThinkPad X1 Yoga,The ThinkPad X1 Yoga is a versatile 2-in-1 laptop with a flexible hinge and integrated ThinkPad Pen Pro.,Lenovo,1600,70
+2,Telefonia,4,Smartphones,10011,iPhone 13,The iPhone 13 is the latest smartphone from Apple with a stunning Super Retina XDR display.,Apple,1000,200
+2,Telefonia,4,Smartphones,10012,Galaxy S21 Ultra,The Galaxy S21 Ultra is a flagship smartphone from Samsung with an incredible camera system and 5G connectivity.,Samsung,1200,180
+2,Telefonia,4,Smartphones,10013,Pixel 6,The Pixel 6 is Google's latest smartphone with a powerful camera system and stock Android experience.,Google,900,150
+2,Telefonia,5,Smartwatches,10014,Apple Watch Series 7,The Apple Watch Series 7 is a feature-rich smartwatch with a bright always-on display and advanced health tracking features.,Apple,400,300
+2,Telefonia,5,Smartwatches,10015,Galaxy Watch 4,The Galaxy Watch 4 is a stylish smartwatch with advanced fitness tracking and long battery life.,Samsung,300,250
+2,Telefonia,5,Smartwatches,10016,Fitbit Versa 3,The Fitbit Versa 3 is a versatile smartwatch with built-in GPS and advanced health monitoring features.,Fitbit,250,200
+2,Telefonia,6,Accessories,10017,AirPods Pro,The AirPods Pro are premium wireless earbuds with active noise cancellation and a comfortable fit.,Apple,250,150
+2,Telefonia,6,Accessories,10018,Pixel Stand,The Pixel Stand is a wireless charger designed for Google Pixel smartphones with fast charging capabilities.,Google,80,100
+2,Telefonia,6,Accessories,10019,Wireless Charger Duo,The Wireless Charger Duo is a dual charging pad that can charge two devices simultaneously.,Samsung,100,120
+3,Imagen,7,Televisores,10020,Bravia X90J,The Bravia X90J is a high-end 4K TV with impressive picture quality and support for HDR.,Sony,1500,40
+3,Imagen,7,Televisores,10021,LG C1 OLED,The LG C1 OLED is a premium TV with stunning OLED display technology and Dolby Vision support.,LG,1800,30
+3,Imagen,7,Televisores,10022,Samsung QN90A,The Samsung QN90A is a QLED TV with Quantum Dot technology and Object Tracking Sound+ for immersive audio.,Samsung,2000,25
+3,Imagen,8,Proyectores,10023,Epson Home Cinema 5050UB,The Epson Home Cinema 5050UB is a high-performance 4K projector with HDR support for an immersive viewing experience.,Epson,2000,20
+3,Imagen,8,Proyectores,10024,Optoma UHD50X,The Optoma UHD50X is a versatile 4K projector with low input lag and vibrant colors for gaming and movies.,Optoma,2200,15
+3,Imagen,8,Proyectores,10025,LG CineBeam HU85LA,The LG CineBeam HU85LA is a short-throw 4K laser projector with smart TV features and voice control.,LG,3000,10
+3,Imagen,9,Cámaras,10026,Alpha 7 IV,The Alpha 7 IV is a full-frame mirrorless camera with advanced autofocus and high-resolution image sensor.,Sony,2500,30
+3,Imagen,9,Cámaras,10027,EOS R6,The EOS R6 is a mirrorless camera from Canon with excellent image stabilization and 4K video recording capabilities.,Canon,2800,25
+3,Imagen,9,Cámaras,10028,Lumix GH5,The Lumix GH5 is a versatile mirrorless camera with professional-grade video features and rugged design.,Panasonic,2000,20
+4,Audio,10,Auriculares,10029,Sony WH-1000XM4,The Sony WH-1000XM4 is a top-of-the-line wireless noise-canceling headphones with excellent sound quality.,Sony,300,100
+4,Audio,10,Auriculares,10030,AirPods Pro,The AirPods Pro are premium wireless earbuds with active noise cancellation and a comfortable fit.,Apple,250,150
+4,Audio,10,Auriculares,10031,Pixel Buds,The Pixel Buds are wireless earbuds from Google with hands-free Google Assistant and real-time translation.,Google,180,120
+4,Audio,11,Altavoces Bluetooth,10032,JBL Flip 5,The JBL Flip 5 is a portable Bluetooth speaker with powerful sound and a durable design.,JBL,100,80
+4,Audio,11,Altavoces Bluetooth,10033,UE Boom 3,The UE Boom 3 is a waterproof Bluetooth speaker with 360-degree sound and long battery life.,UE,120,70
+4,Audio,11,Altavoces Bluetooth,10034,Sonos Move,The Sonos Move is a durable Bluetooth speaker with built-in Alexa and Google Assistant.,Sonos,400,65
+4,Audio,12,Barras de sonido,10035,Bose Noise Cancelling Headphones 700,The Bose Noise Cancelling Headphones 700 offer excellent noise cancellation and premium audio quality.,Bose,350,90
+4,Audio,12,Barras de sonido,10036,Sennheiser Momentum 3 Wireless,The Sennheiser Momentum 3 Wireless headphones feature active noise cancellation and refined design.,Sennheiser,400,60
+4,Audio,12,Barras de sonido,10037,Beats Studio3 Wireless,The Beats Studio3 Wireless headphones feature adaptive noise cancellation and up to 22 hours of battery life.,Beats,300,75
